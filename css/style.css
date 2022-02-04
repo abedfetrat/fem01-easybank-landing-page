@@ -1,0 +1,346 @@
+/* ----------------  1. Custom properties ---------------- */
+
+:root {
+    /* ------------ Typography ----------- */
+    --ff-primary: 'Public Sans', sans-serif;
+    /* 15px */
+    --fs-body-text: 0.9375rem;
+    /* 40px */
+    --fs-heading-1: 2.5rem;
+    /* 32px */
+    --fs-heading-2: 2rem;
+    /* 20px */
+    --fs-heading-3: 1.25rem;
+    /* 15px */
+    --fs-feature-body-copy: 0.9375rem;
+    /* ------------ Colors ----------- */
+    --dark-blue: hsl(233, 26%, 24%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+    --grayish-blue: hsl(233, 8%, 62%);
+    --light-grayish-blue: hsl(220, 16%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --clr-text: var(--grayish-blue);
+    --clr-heading: var(--dark-blue);
+    --clr-page-background: var(--very-light-gray);
+    --clr-footer-background: var(--dark-blue);
+    --gradient-primary: linear-gradient(135deg, var(--lime-green) 0%, var(--bright-cyan) 99.58%);
+    /* ------------ Spacing ----------- */
+    --site-horizontal-spacing: 24px;
+    /* ------------ Dimensions ----------- */
+    --site-content-width: 1110px;
+    --navbar-height: 64px;
+}
+
+
+/* ----------------  2. Global styles ---------------- */
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body-text);
+    line-height: 1.667;
+    color: var(--clr-text);
+    background-color: var(--clr-page-background);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    color: var(--clr-heading);
+}
+
+h1 {
+    font-size: var(--fs-heading-1);
+    /* 47px */
+    line-height: 1.175;
+    margin-bottom: 0.4em;
+}
+
+h2 {
+    font-size: var(--fs-heading-2);
+    /* 38px */
+    line-height: 1.188;
+    margin-bottom: 0.438em;
+}
+
+h3 {
+    font-size: var(--fs-heading-3);
+    /* 28px */
+    line-height: 1.4;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ----------------  3. Components ---------------- */
+
+.cta-btn {
+    display: inline-block;
+    padding: 0.57em 2.42em;
+    border-radius: 50px;
+    background: var(--gradient-primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 2;
+}
+
+.cta-btn,
+.cta-btn:visited,
+.cta-btn:hover,
+.cta-btn:active {
+    color: var(--white);
+}
+
+
+/* ----------------  4. Layout ---------------- */
+
+
+/* ------------ Common ----------- */
+
+.container {
+    max-width: var(--site-content-width);
+    margin: 0 var(--site-horizontal-spacing);
+}
+
+
+/* ------------ Navbar ----------- */
+
+.navbar {
+    height: var(--navbar-height);
+    background-color: var(--white);
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .desktop {
+    display: none;
+}
+
+.navbar__mobile-menu-toggle {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.navbar__mobile-menu-toggle .icon-close {
+    display: none;
+}
+
+
+/* Swap icons depending on if the menu is opened */
+
+.show-mobile-menu .navbar__mobile-menu-toggle .icon-hamburger {
+    display: none;
+}
+
+.show-mobile-menu .navbar__mobile-menu-toggle .icon-close {
+    display: block;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: -(var(--navbar-height));
+    left: 0;
+    z-index: 998;
+}
+
+.show-mobile-menu .mobile-menu {
+    display: block;
+}
+
+.mobile-menu__container {
+    position: absolute;
+    width: calc(100% - (var(--site-horizontal-spacing) * 2));
+    top: var(--site-horizontal-spacing);
+    left: var(--site-horizontal-spacing);
+    padding: 32px;
+    border-radius: 4px;
+    background-color: var(--white);
+    color: var(--dark-blue);
+    text-align: center;
+    z-index: 2;
+}
+
+.mobile-menu__nav-link {
+    display: inline-block;
+    font-size: 1.125rem;
+    line-height: 1;
+    padding: 0.667em;
+}
+
+.mobile-menu__backdrop {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #2D314D 0%, rgba(45, 49, 77, 0.0001) 100%);
+    z-index: 1;
+}
+
+
+/* ------------ Hero ----------- */
+
+.hero__graphics-container {
+    position: relative;
+    width: 100%;
+    height: 282px;
+    overflow: hidden;
+    background-image: url(/images/bg-intro-mobile.svg);
+    background-position: bottom 55% right 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.hero__graphics-container img {
+    width: min(100%, 465px);
+    margin-top: -121px;
+    padding: 0 var(--site-horizontal-spacing);
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 374px) {
+    .hero__graphics-container img {
+        margin-top: 0;
+    }
+}
+
+.hero__container {
+    margin-top: 40px;
+    padding-bottom: 88px;
+    text-align: center;
+}
+
+.hero__cta {
+    margin-top: 32px;
+}
+
+
+/* ------------ Features Section ----------- */
+
+.features {
+    padding: 64px 0;
+    background-color: var(--light-grayish-blue);
+    text-align: center;
+}
+
+.features__features-list {
+    margin-top: 56px;
+}
+
+.features__feature {
+    margin-top: 32px;
+}
+
+.features__feature-heading {
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+
+/* ------------ Articles Section ----------- */
+
+.articles {
+    padding: 88px 0;
+}
+
+.articles__heading {
+    margin-bottom: 31px;
+    text-align: center;
+}
+
+.articles__article {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.articles__article:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.articles__article-photo {
+    display: block;
+    width: 100%;
+    /* Browser support might not be the best, but I couldn't find a better
+    solution to this */
+    aspect-ratio: 327/200;
+}
+
+.articles__article-content {
+    padding: 25px 31px 44px 31px;
+    background-color: var(--white);
+}
+
+.articles__article-author {
+    /* 10px */
+    font-size: 0.625rem;
+    line-height: 1.8;
+}
+
+.articles__article-title {
+    margin: 8px 0;
+    font-size: 1rem;
+    line-height: 1.25em;
+}
+
+.articles__article-preview-text {
+    /* 13px */
+    font-size: 0.8125rem;
+    line-height: 1.385;
+}
+
+
+/* ------------ Primary Footer ----------- */
+
+.primary-footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.primary-footer__container {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.primary-footer__socials {
+    /* Display flex just to make sure items are centered vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+    line-height: 1;
+}
+
+.primary-footer__socials>*:not(:last-child) {
+    margin-right: 16px;
+}
+
+.primary-footer__nav {
+    margin: 32px 0;
+}
+
+.primary-footer__nav-link {
+    display: block;
+    padding: 0.4em;
+    line-height: 1.733;
+}
+
+.primary-footer__copyright-notice {
+    display: block;
+    margin-top: 24px;
+    opacity: .5;
+}

@@ -39,7 +39,7 @@
         <!-- Navigation -->
         <header class="navbar">
             <div class="navbar__container container">
-                <a href="./index.html">
+                <a class="a-is-wrapper" href="./index.html">
                     <img class="navbar__logo" src="./images/logo.svg" alt="Easybank">
                 </a>
                 <nav class="navbar__nav desktop">
@@ -99,10 +99,14 @@
 
         <!-- Hero -->
         <section class="hero">
-            <!-- Intro background is set as background image to this element -->
-            <div class="hero__graphics-container">
-                <img src="./images/image-mockups.png" alt="Mockups of the Easybank mobile app">
-            </div>
+            <figure class="hero__mockup-graphic">
+                <img src="./images/image-mockups.png" alt="">
+            </figure>
+            <picture class="hero__background-graphic-container">
+                <source srcset="./images/bg-intro-desktop.svg" media="(min-width: 1100px)">
+                <source srcset="./images/bg-intro-mobile.svg">
+                <img class="hero__background-graphic" width="375" height="423" src="./images/bg-intro-mobile.svg" alt="">
+            </picture>
             <div class="hero__container container">
                 <div class="hero__content">
                     <h1 class="hero__heading">Next generation digital banking</h1>
@@ -120,7 +124,8 @@
             <div class="features__container container">
                 <h2 class="features__heading">Why choose Easybank?</h2>
                 <p class="features__text">
-                    We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.
+                    We leverage Open Banking to turn your bank account into your financial hub.
+                    <br> Control your finances like never before.
                 </p>
                 <div class="features__features-list">
                     <div class="features__feature">

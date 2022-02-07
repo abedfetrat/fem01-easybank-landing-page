@@ -1,3 +1,26 @@
+/* ////////////////////////////////////////////////////////// */
+
+
+/*                    TABLE OF CONTENTS
+
+    1. Custom properties
+    2. Global styles
+    3. Components
+    4. Layout
+        4.1 Common
+        4.2 Navbar
+        4.3 Hero
+        4.4 Features section
+        4.5 Articles section
+        4.6 Primary footer
+    5. Utillities
+
+*/
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+
 /* ----------------  1. Custom properties ---------------- */
 
 :root {
@@ -11,6 +34,9 @@
     --fs-heading-2: 2rem;
     /* 20px */
     --fs-heading-3: 1.25rem;
+    --fw-thin: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
     /* ------------ Colors ----------- */
     --dark-blue: hsl(233, 26%, 24%);
     --lime-green: hsl(136, 65%, 51%);
@@ -67,7 +93,7 @@ body {
 h1,
 h2,
 h3 {
-    font-weight: 300;
+    font-weight: var(--fw-thin);
     color: var(--clr-heading);
 }
 
@@ -121,7 +147,7 @@ a:active {
     border-radius: 50px;
     background: var(--gradient-primary);
     font-size: 0.875rem;
-    font-weight: 700;
+    font-weight: var(--fw-bold);
     line-height: 2;
     overflow: hidden;
 }
@@ -152,7 +178,7 @@ a:active {
 /* ----------------  4. Layout ---------------- */
 
 
-/* ------------ Common ----------- */
+/* ------------ 4.1 Common ----------- */
 
 .container {
     max-width: calc(var(--site-content-width) + (var(--site-horizontal-spacing) * 2));
@@ -172,7 +198,7 @@ a:active {
 }
 
 
-/* ------------ Navbar ----------- */
+/* ------------ 4.2 Navbar ----------- */
 
 .navbar {
     position: relative;
@@ -295,7 +321,7 @@ a:active {
 }
 
 
-/* ------------ Hero ----------- */
+/* ------------ 4.3 Hero ----------- */
 
 .hero {
     position: relative;
@@ -387,7 +413,7 @@ a:active {
 }
 
 
-/* ------------ Features Section ----------- */
+/* ------------ 4.4 Features Section ----------- */
 
 .features {
     padding: 64px 0;
@@ -404,8 +430,8 @@ a:active {
 }
 
 .features__feature-heading {
-    margin-top: 24px;
-    margin-bottom: 16px;
+    margin-top: 1em;
+    margin-bottom: 0.66em;
 }
 
 
@@ -429,7 +455,7 @@ a:active {
 }
 
 
-/* ------------ Articles Section ----------- */
+/* ------------ 4.5 Articles Section ----------- */
 
 .articles {
     padding: 88px 0;
@@ -468,7 +494,7 @@ a:active {
 }
 
 .articles__article-title {
-    margin: 8px 0;
+    margin: 0.5em 0;
     font-size: 1rem;
     line-height: 1.25em;
 }
@@ -507,7 +533,7 @@ a:active {
 }
 
 
-/* ------------ Primary Footer ----------- */
+/* ------------ 4.6 Primary Footer ----------- */
 
 .primary-footer {
     --clr-link-hover: hsla(158, 61%, 49%, 1);
@@ -592,7 +618,7 @@ a:active {
 }
 
 
-/* ----------------  5. Utillity classes ---------------- */
+/* ----------------  5. Utillities ---------------- */
 
 .a-wraps-image {
     line-height: 0;

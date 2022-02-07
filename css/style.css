@@ -14,6 +14,7 @@
         4.5 Articles section
         4.6 Primary footer
     5. Utillities
+    6. Attribution
 
 */
 
@@ -622,4 +623,21 @@ a:active {
 
 .a-wraps-image {
     line-height: 0;
+}
+
+
+/* ----------------  6. Attribution ---------------- */
+
+.attribution {
+    padding-bottom: .9em;
+    font-size: 0.6875rem;
+    text-align: center;
+    background-color: hsl(233, 26%, 24%);
+}
+
+.attribution a,
+.attribution a:visited,
+.attribution a:hover,
+.attribution a:active {
+    color: hsl(228, 47%, 85%);
 }

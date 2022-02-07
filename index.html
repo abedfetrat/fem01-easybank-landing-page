@@ -17,28 +17,12 @@
     <script src="./scripts/main.js" defer></script>
 
     <title>Frontend Mentor | Easybank landing page</title>
-
-    <style>
-        .attribution {
-            padding-bottom: 10px;
-            font-size: 11px;
-            text-align: center;
-            background-color: hsl(233, 26%, 24%);
-        }
-        
-        .attribution a,
-        .attribution a:visited,
-        .attribution a:hover,
-        .attribution a:active {
-            color: hsl(228, 47%, 85%);
-        }
-    </style>
 </head>
 
 <body>
     <header class="js-primary-header">
         <!-- Navigation -->
-        <header class="navbar">
+        <div class="navbar">
             <div class="navbar__container container">
                 <a class="a-wraps-image" href="./index.html" aria-label="easybank homepage">
                     <img class="navbar__logo" width="139" height="20" src="./images/logo.svg" alt="Easybank">
@@ -69,7 +53,7 @@
                     <img class="icon-close" width="18" height="19" src="./images/icon-close.svg" alt="Close">
                 </button>
             </div>
-        </header>
+        </div>
 
         <!-- Mobile navigation menu -->
         <!-- toggled with .show-mobile-menu classs on header -->
@@ -101,7 +85,7 @@
         <!-- Hero -->
         <section class="hero">
             <figure class="hero__mockup-graphic">
-                <img src="./images/image-mockups.png" alt="">
+                <img src="./images/image-mockups.png" alt="Mockups of the Easybank mobile app">
             </figure>
             <picture class="hero__background-graphic-container">
                 <source srcset="./images/bg-intro-desktop.svg" media="(min-width: 1100px)">
@@ -121,6 +105,7 @@
     </header>
 
     <main>
+        <!-- Features section -->
         <section class="features">
             <div class="features__container container">
                 <h2 class="features__heading">Why choose Easybank?</h2>
@@ -160,7 +145,7 @@
                 </div>
             </div>
         </section>
-
+        <!-- Articles section -->
         <section class="articles">
             <div class="articles__container container">
                 <h2 class="articles__heading">Latest Articles</h2>
@@ -217,7 +202,7 @@
             </div>
         </section>
     </main>
-
+    <!-- Primary Footer -->
     <footer class="primary-footer">
         <div class="primary-footer__container container">
             <nav class="primary-footer__nav" aria-label="secondary navigation">
@@ -305,6 +290,7 @@
 
         </div>
     </footer>
+    <!-- Frontend Mentor attribution -->
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
         <a href="https://www.frontendmentor.io/profile/abedfetrat">Abed Fetrat</a>.

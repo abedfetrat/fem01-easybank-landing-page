@@ -155,17 +155,9 @@ a:active {
 /* ------------ Common ----------- */
 
 .container {
-    max-width: var(--site-content-width);
-    margin: 0 var(--site-horizontal-spacing);
-}
-
-
-/* Horizontally center container on desktop screen resolution and above  */
-
-@media only screen and (min-width: 1100px) {
-    .container {
-        margin: 0 auto;
-    }
+    max-width: calc(var(--site-content-width) + (var(--site-horizontal-spacing) * 2));
+    margin: 0 auto;
+    padding: 0 var(--site-horizontal-spacing);
 }
 
 
@@ -356,7 +348,8 @@ a:active {
     .hero__container {
         position: relative;
         margin-top: 0;
-        padding: 170px 0;
+        padding-top: 170px;
+        padding-bottom: 170px;
         text-align: start;
         z-index: 2;
     }
@@ -460,9 +453,8 @@ a:active {
 .articles__article-photo {
     display: block;
     width: 100%;
-    /* Browser support might not be the best, but I couldn't find a better
-    solution to this */
-    aspect-ratio: 327/200;
+    height: 200px;
+    object-fit: cover;
 }
 
 .articles__article-content {
@@ -524,7 +516,8 @@ a:active {
 }
 
 .primary-footer__container {
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
     text-align: center;
 }
 
@@ -571,7 +564,8 @@ a:active {
 @media only screen and (min-width: 1100px) {
     .primary-footer__container {
         display: flex;
-        padding: 48px 0;
+        padding-top: 48px;
+        padding-bottom: 48px;
         justify-content: space-between;
         align-items: center;
         /* 15px */

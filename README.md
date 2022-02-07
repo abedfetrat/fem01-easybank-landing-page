@@ -25,12 +25,18 @@ Users should be able to:
 
 ### Screenshot
 
-![](./desktop-screenshot.png)
+Desktop
+
+![Desktop screenshot](./desktop-screenshot.png)
+
+Mobile
+
+![Mobile screenshot 1](./mobile-screenshot1.png) ![Mobile screenshot 2](./mobile-screenshot2.png)
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-grid-and-flexbox--t-Vo1cNV](https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-grid-and-flexbox--t-Vo1cNV)
-- Live Site URL: [https://abedfetrat.github.io/fem01-easybank-landing-page/](https://abedfetrat.github.io/fem01-easybank-landing-page/)
+- Solution URL: [View solution on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-grid-and-flexbox--t-Vo1cNV)
+- Live Site URL: [View live site](https://abedfetrat.github.io/fem01-easybank-landing-page/)
 
 ## My process
 
@@ -44,7 +50,7 @@ Users should be able to:
 
 ### What I learned
 
-- I learned to use the `<picture> ` element to offer alternative images for different screen sizes/resolutions:
+- I learned to use the `<picture>` element to offer alternative images for different screen sizes/resolutions:
 
 ```html
 <picture class="hero__background-graphic-container">
@@ -75,4 +81,4 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@abedfetrat](https://www.frontendmentor.io/profile/abedfetrat)
-- LinkedIn - [](https://www.linkedin.com/in/abed-fetrat-84728717a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BUKdPHQu3Qm%2B6krqAb0fxCw%3D%3D)
+- LinkedIn - [View LinkedIn profile](https://www.linkedin.com/in/abed-fetrat-84728717a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BUKdPHQu3Qm%2B6krqAb0fxCw%3D%3D)

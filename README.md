@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [](https://abedfetrat.github.io/fem01-easybank-landing-page/)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-grid-and-flexbox--t-Vo1cNV](https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-grid-and-flexbox--t-Vo1cNV)
+- Live Site URL: [https://abedfetrat.github.io/fem01-easybank-landing-page/](https://abedfetrat.github.io/fem01-easybank-landing-page/)
 
 ## My process
 
@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-- I learned to use the `html <picture> ` element to offer alternative images for different screen sizes/resolutions
+- I learned to use the `<picture> ` element to offer alternative images for different screen sizes/resolutions:
 
 ```html
 <picture class="hero__background-graphic-container">
